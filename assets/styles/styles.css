@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
+
+
+/* untuk elemen */
+*{
+    box-sizing: border-box;
+}
+aside{
+    float: right;
+    width: 25%;
+    padding-left: 15px;
+}
+body {
+    font-family: 'Quicksand', sans-serif;
+    padding: 0;
+    margin: 0;
+    min-width: 320px;
+}
+figcaption{
+    font-weight: bold;
+}
+header{
+    display: inline;
+}
+footer{
+    padding: 2px;
+    color: white;
+    background-color: rgba(8, 1, 47, 0.75);
+    text-align: center;
+}
+main{
+    padding: 10px;
+    overflow: auto;
+}
+nav{
+    background-color: rgba(8, 1, 47, 0.75);
+    padding: 5px;
+    position: sticky;
+    top: 0;
+}
+nav a{
+    font-size: 18px;
+    font-weight: 400;
+    text-decoration: none;
+    color: white;
+}
+nav a:hover{
+    font-weight: bold;
+}
+nav li{
+    display: inline;
+    list-style: none;
+    margin-right: 20px;
+}
+
+/* untuk id */
+#content {
+    float: left;
+    width: 75%;
+}
+#imgMenu{
+    height: 20px;
+    object-position: center;
+    object-fit: cover;
+}
+
+/* untuk class */
+.card{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    padding: 20px 10px 10px;
+    /* margin-top: 5px; */
+    margin: 10px;
+}
+
+.flex-container-row{
+    display: flex;
+    flex-wrap: wrap;
+}
+.flex-container-column{
+    display: none;
+    flex-direction: column;
+    flex-basis: 25%;
+    flex-grow: 1;
+}
+
+.flex-container-column.card:hover{
+    cursor: pointer;
+    box-shadow: 0 4px 8px 5px rgba(59, 19, 235, 0.5);
+}
+
+.jumbotron{
+    font-size: 20px;
+    padding: 60px;
+    text-align: center;
+    color: white;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url("../img/header.jpg");
+    height: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.photos{
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.profile-image{
+    width: 100%;
+    border-radius: 50%;
+}
+.profile header{
+    text-align: center;
+}
+
+.tampil{
+    display: flex;
+}
+
+.topNav li.iconMenu{
+    display: none;
+    float: right;
+    padding-right: 5px;
+}
+
+
+@media screen and (max-width: 1000px){
+    #content, aside{
+        width: 100%;
+        padding: 0;
+    }
+}
+@media screen and (max-width: 800px){
+    .flex-container-column{
+        flex-basis: 40%;
+    }
+}
+@media screen and (max-width: 500px){
+    .flex-container-column{
+        flex-basis: 100%;
+    }
+
+    .topNav li:not(:first-child) { /* Menyembunyikan menu */
+        display: none;
+    } 
+
+    .topNav li.iconMenu{
+        display: block;
+    }
+}
+
+@media screen and (max-width:500px){
+    .topNav.responsive li{
+        display: block;
+        list-style: none;
+        margin-right: 20px;
+    }
+
+    .topNav.responsive li.iconMenu{
+        position: absolute;
+        right: 0;
+        top: 20px;
+
+        
+    }
+}
